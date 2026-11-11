@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV SERIES</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #1c1c1c;
+            padding: 22px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #e50914;
+            font-size: 32px;
+        }
+
+        .container {
+            padding: 25px;
+        }
+
+        .series {
+            background: #222;
+            width: 220px;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .series img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        button {
+            background: #e50914;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>TV SERIES</h1>
+    <p>Eng yaxshi tarixiy seriallar</p>
+</header>
+
+<div class="container">
+    <h2>Tarixiy seriallar</h2>
+
+    <div class="series">
+        <img src="mehmed.jpg" alt="Mehmed seriali">
+        <h3>Mehmed: Fetihler Sultanı</h3>
+        <p>Turkiya tarixiy seriali</p>
+        <button>Tomosha qilish</button>
+    </div>
+</div>
+
+</body>
+</html>
+<input
+    type="text"
+    id="search"
+    placeholder="Serial qidirish..."
+    onkeyup="searchSeries()"
+>
+
+<script>
+function searchSeries() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let series = document.querySelectorAll(".series");
+
+    series.forEach(item => {
+        let name = item.innerText.toLowerCase();
+
+        item.style.display = name.includes(input)
+            ? "block"
+            : "none";
+    });
+}
+</script><!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>Mehmed - TV SERIES</title>
+<style>
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial;
+    padding: 30px;
+}
+h1 { color: #e50914; }
+</style>
+</head>
+<body>
+
+<h1>Mehmed: Fetihler Sultanı</h1>
+
+<img src="mehmed.jpg" width="220">
+
+<h2>Serial haqida</h2>
+<p>Fotih Sulton Mehmed va Usmonli imperiyasi tarixi.</p>
+
+<h2>Qismlar</h2>
+<button>1-qism</button>
+
+<br><br>
+<a href="index.html" style="color:white;">← Bosh sahifa</a>
+
+</body>
+</html><div class="series">
+    <img src="osman.jpg" alt="Kuruluş Osman">
+    <h3>Kuruluş Osman</h3>
+    <p>Usmonli davlatining tashkil topishi haqida.</p>
+    <a href="osman.html">
+        <button>Serialni ko‘rish</button>
+    </a>
+</div>
+
+<div class="series">
+    <img src="ertugrul.jpg" alt="Diriliş Ertuğrul">
+    <h3>Diriliş Ertuğrul</h3>
+    <p>Turkiya tarixidagi mashhur tarixiy serial.</p>
+    <a href="ertugrul.html">
+        <button>Serialni ko‘rish</button>
+    </a>
+</div><h2>1-qism</h2>
+
+<video width="500" controls>
+    <source src="videos/mehmed1.mp4" type="video/mp4">
+    Brauzeringiz videoni ocholmadi.
+</video>
